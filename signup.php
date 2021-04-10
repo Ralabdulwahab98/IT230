@@ -8,7 +8,7 @@
   <h2 class="mb-3">Sign Up</h2>
   <h5 class="">Welcome to our website. Please fill in the form below to complete your registration.</h5>
   <h5 class="mb-4">If you already have an account, login <a href="<?php echo $config['app_url'] ?>login.php">here</a></h5>
-  <form class="form-control" id="form" action="" method="post" onsubmit="return validateForm()">
+  <form class="form-control" id="form" action="" method="post" >
     <div class="mb-3 mt-2">
       <label for="first_name" class="form-label">First Name:</label>
       <input id="first_name" type="text" name="first_name" class="form-control" required>
@@ -32,6 +32,10 @@
       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
       title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
     </div>
+      <!-- 
+        TODO:
+        check if the password match 
+      -->
     <div class="mb-3">
       <label for="password_confirmation" class="form-label">Password confirmation</label>
       <input id="password_confirmation" type="password" name="password_confirmation" class="form-control">
